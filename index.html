@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tra Cứu Phong Thủy BĐS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Phong Thủy Bất Động Sản</h1>
+    <div class="form-section">
+      <label>Ngày sinh (dương lịch):</label>
+      <input type="date" id="ngaySinh" required>
+
+      <label>Giờ sinh (0–23):</label>
+      <input type="number" id="gioSinh" min="0" max="23">
+
+      <label>Giới tính:</label>
+      <select id="gioiTinh">
+        <option value="Nam">Nam</option>
+        <option value="Nữ">Nữ</option>
+      </select>
+
+      <label>Năm xây nhà / nhập trạch:</label>
+      <input type="number" id="namXayNha" min="1900" max="2100">
+
+      <label>Hướng nhà:</label>
+      <select id="huongNha">
+        <option value="Bắc">Bắc</option>
+        <option value="Đông Bắc">Đông Bắc</option>
+        <option value="Đông">Đông</option>
+        <option value="Đông Nam">Đông Nam</option>
+        <option value="Nam">Nam</option>
+        <option value="Tây Nam">Tây Nam</option>
+        <option value="Tây">Tây</option>
+        <option value="Tây Bắc">Tây Bắc</option>
+      </select>
+
+      <fieldset>
+        <legend>Yếu tố phong thủy xấu</legend>
+        <label><input type="checkbox" id="datDoc"> Đất dốc</label>
+        <label>Hướng dốc: <input type="text" id="huongDoc"></label>
+
+        <label><input type="checkbox" id="duongDam"> Đường đâm thẳng</label>
+        <label>Hướng đường: <input type="text" id="huongDuong"></label>
+
+        <label><input type="checkbox" id="nuocTruoc"> Có nước trước cửa</label>
+        <label>Khoảng cách (m): <input type="number" id="khoangCachNuoc" min="0"></label>
+
+        <label><input type="checkbox" id="benhVien"> Bệnh viện đối diện</label>
+        <label><input type="checkbox" id="chua"> Chùa/Đình/Miếu trước nhà</label>
+        <label><input type="checkbox" id="nhaTho"> Nhà thờ trước mặt</label>
+        <label><input type="checkbox" id="nghiaDia"> Nghĩa địa trước mặt</label>
+      </fieldset>
+
+      <button id="btnCheck">Xem Phong Thủy</button>
+    </div>
+
+    <div id="result" class="result-box"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
